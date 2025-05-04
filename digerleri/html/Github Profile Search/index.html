@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profil Arama</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fab fa-github"></i> GitHub Profil Arama</h1>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+        
+        <div class="search-box">
+            <div class="search-input">
+                <i class="fas fa-search"></i>
+                <input type="text" id="username" placeholder="Kullanıcı adı girin..." autocomplete="off">
+                <button id="search-btn">Ara</button>
+            </div>
+        </div>
+        
+        <div id="profile-card" class="hidden">
+            <div class="profile-header">
+                <div class="avatar-container">
+                    <img id="avatar" src="" alt="Profil resmi">
+                    <div class="badges">
+                        <span class="badge followers" id="followers-badge">
+                            <i class="fas fa-users"></i>
+                            <span id="followers"></span>
+                        </span>
+                        <span class="badge following" id="following-badge">
+                            <i class="fas fa-user-plus"></i>
+                            <span id="following"></span>
+                        </span>
+                        <span class="badge repos" id="repos-badge">
+                            <i class="fas fa-code-branch"></i>
+                            <span id="repos"></span>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="profile-info">
+                    <h2 id="name"></h2>
+                    <p class="username" id="login"></p>
+                    <p class="bio" id="bio"></p>
+                    
+                    <div class="meta-info">
+                        <div class="meta-item" id="location-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="location"></span>
+                        </div>
+                        <div class="meta-item" id="company-item">
+                            <i class="fas fa-building"></i>
+                            <span id="company"></span>
+                        </div>
+                        <div class="meta-item" id="twitter-item">
+                            <i class="fab fa-twitter"></i>
+                            <span id="twitter"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-footer">
+                <a id="profile-link" href="" target="_blank" class="btn primary">
+                    <i class="fas fa-external-link-alt"></i> Profili Görüntüle
+                </a>
+                <button id="show-more-btn" class="btn secondary">
+                    <i class="fas fa-chevron-down"></i> Daha Fazla Bilgi
+                </button>
+            </div>
+            
+            <div id="detailed-info">
+                <div class="detailed-section">
+                    <h3><i class="fas fa-code"></i> Repolar</h3>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-value" id="public-repos"></div>
+                            <div class="stat-label">Public Repolar</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="private-repos"></div>
+                            <div class="stat-label">Private Repolar</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="detailed-section">
+                    <h3><i class="fas fa-chart-line"></i> İstatistikler</h3>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-value" id="gists"></div>
+                            <div class="stat-label">Gistler</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="created-at"></div>
+                            <div class="stat-label">Üyelik Tarihi</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="detailed-section" id="repos-container">
+                    <h3><i class="fas fa-star"></i> Popüler Repolar</h3>
+                    <div id="repos-list" class="repos-list"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="error-message" class="hidden">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Kullanıcı bulunamadı. Lütfen geçerli bir GitHub kullanıcı adı girin.</p>
+        </div>
+        
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Profil bilgileri yükleniyor...</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
