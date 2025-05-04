@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoxPvP Eşya Mağazası</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>BoxPvP Eşya Mağazası</h1>
+        <div class="promo-banner">
+            <p>Sınırlı Süre! Tüm eşyalarda %20 indirim!</p>
+        </div>
+        <p class="subtitle">En iyi eşyaları keşfet ve savaşta öne geç!</p>
+        
+        <input type="text" id="searchBar" placeholder="Eşya ara..." onkeyup="searchItems()">
+        <div class="categories">
+            <button onclick="filterItems('all')">Tümü</button>
+            <button onclick="filterItems('weapons')">Silahlar</button>
+            <button onclick="filterItems('armor')">Zırhlar</button>
+            <button onclick="filterItems('tools')">Araçlar</button>
+            <button onclick="filterItems('blocks')">Bloklar</button>
+            <button onclick="filterItems('packs')">Paketler</button>
+        </div>
+
+        <div class="item-list">
+            <div class="item" data-category="weapons" onclick="window.location.href='product.html?id=1'">
+                <span class="badge popular">Popüler</span>
+                <img src="https://via.placeholder.com/150" alt="Kılıç">
+                <h2>Elmas Kılıç</h2>
+            </div>
+            <div class="item" data-category="armor" onclick="window.location.href='product.html?id=2'">
+                <span class="badge new">Yeni</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe1wsC1DSnFRB24qz2CcNiPmBcVTquBhRtMw&s" alt="Zırh">
+                <h2>Netherit Göğüslük (Koruma 10)</h2>
+            </div>
+            <div class="item" data-category="tools" onclick="window.location.href='product.html?id=3'">
+                <img src="https://minecraft.wiki/images/Enchanted_Netherite_Pickaxe.gif?219b4" alt="Kazma">
+                <h2>Netherit Kazma VI</h2>
+            </div>
+            <div class="item" data-category="packs" onclick="window.location.href='product.html?id=4'">
+                <span class="badge new">Yeni</span>
+                <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/80/White_Shulker_Box.png/revision/latest?cb=20200317172554" alt="Paket">
+                <h2>Random Shulker</h2>
+            </div>
+            <div class="item" data-category="blocks" onclick="window.location.href='product.html?id=5'">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNy7hb5PsZPYB6RWPbtTV3sYSSCCDOsMeFRg&s  " alt="Blok">
+                <h2>Obsidyen Blok</h2>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 BoxPvP Mağazası. Tüm hakları saklıdır.</p>
+        <p><a href="https://discord.gg/DEĞİŞTİR">Discord Sunucumuza Katıl</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

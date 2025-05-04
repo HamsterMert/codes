@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Detayı - BoxPvP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Ana Sayfaya Dön</a>
+        <h1 id="product-title"></h1>
+        <div class="item-detail">
+            <img id="product-image" src="" alt="" onclick="openImageModal(this.src)">
+            <div class="item-info">
+                <p><strong>Açıklama:</strong> <span id="product-description"></span></p>
+                <p><strong>Özellikler:</strong></p>
+                <ul id="product-features"></ul>
+                <button onclick="redirectToDiscord()">Satın Al (Discord)</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 BoxPvP Mağazası. Tüm hakları saklıdır.</p>
+        <p><a href="https://discord.gg/DEĞİŞTİR">Discord Sunucumuza Katıl</a></p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal" onclick="closeImageModal()">×</span>
+        <img id="modal-image" src="" alt="">
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // URL'den ID'yi al ve ürünü yükle
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        loadProduct(productId);
+    </script>
+</body>
+</html>

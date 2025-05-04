@@ -1,0 +1,2 @@
+<span class="badge popular">Popüler</span>
+<span class="badge new">Yeni</span>
